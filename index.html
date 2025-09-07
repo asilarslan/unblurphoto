@@ -1,10 +1,834 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Unblur Photo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblur Image: AI Remove Blur - Remove Photo Blur | Professional Photo Enhancement App</title>
+    <meta name="description" content="Unblur Image: AI Remove Blur is your ultimate companion for removing blur from photos with AI-powered technology. Professional photo enhancement and blur removal for crystal clear images.">
+    <meta name="keywords" content="unblur image, AI photo editor, remove blur, photo enhancement, blur removal, AI image editor, professional photo editing, photo restoration, image sharpening, photo clarity">
+    <meta name="author" content="Asil Arslan">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="copyright" content="© 2025 Unblur Image by Asil Arslan">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="coverage" content="Worldwide">
+    <meta name="target" content="all">
+    
+    <!-- Mobile Specific Meta Tags -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Unblur Image">
+    
+    <!-- Schema.org Additional Markup -->
+    <meta itemprop="name" content="Unblur Image: AI Remove Blur">
+    <meta itemprop="description" content="Remove blur from photos with AI-powered technology. Professional photo enhancement and blur removal for crystal clear images.">
+    <meta itemprop="image" content="unblur-image-logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unblurphoto.app/">
+    <meta property="og:title" content="Unblur Image: AI Remove Blur - Remove Photo Blur">
+    <meta property="og:description" content="Remove blur from photos with AI-powered technology. Professional photo enhancement and blur removal for crystal clear images.">
+    <meta property="og:image" content="unblur-image-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://unblurphoto.app/">
+    <meta property="twitter:title" content="Unblur Image: AI Remove Blur - Remove Photo Blur">
+    <meta property="twitter:description" content="Remove blur from photos with AI-powered technology. Professional photo enhancement and blur removal for crystal clear images.">
+    <meta property="twitter:image" content="unblur-image-logo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://unblurphoto.app/">
+
+    <!-- App Store Link -->
+    <meta name="apple-itunes-app" content="app-id=6751783489">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Unblur Image: AI Remove Blur",
+        "description": "Remove blur from photos with AI-powered technology. Professional photo enhancement and blur removal for crystal clear images.",
+        "applicationCategory": "Photography",
+        "operatingSystem": "iOS",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "downloadUrl": "https://apps.apple.com/us/app/unblur-image-ai-remove-blur/id6751783489",
+        "author": {
+            "@type": "Person",
+            "name": "Asil Arslan"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "15"
+        }
+    }
+    </script>
+
+    <!-- Additional Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Unblur Image: AI Remove Blur",
+        "url": "https://unblurphoto.app/",
+        "description": "Official website for Unblur Image: AI Remove Blur - AI-powered photo blur removal app",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Unblur Image",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "unblur-image-logo.png"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://unblurphoto.app/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Unblur Image",
+        "url": "https://unblurphoto.app/",
+        "logo": "unblur-image-logo.png",
+        "sameAs": [
+            "https://apps.apple.com/us/app/unblur-image-ai-remove-blur/id6751783489"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "asilarslan93@gmail.com"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="unblur-image-logo.png">
+    <link rel="apple-touch-icon" href="unblur-image-logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="unblur-image-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="unblur-image-logo.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="unblur-image-logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="unblur-image-logo.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="unblur-image-logo.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="unblur-image-logo.png">
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="msapplication-TileImage" content="unblur-image-logo.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-navbutton-color" content="#667eea">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://tools.applemediaservices.com">
+    <link rel="dns-prefetch" href="https://tools.applemediaservices.com">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            padding: 2px;
+            box-shadow: 0 2px 6px rgba(102, 126, 234, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .app-store-badge {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .app-store-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .how-it-works {
+            background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .step-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .testimonials {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            z-index: 999;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+            display: block;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                width: 200px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 1rem;
+                gap: 1rem;
+                z-index: 1001;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+
+            .features-grid, .steps, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-logo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .seo-content {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .seo-content h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .seo-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .keywords {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .keywords h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .keywords ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .keywords li {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #667eea;
+            border: 1px solid #667eea;
+        }
+
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .premium-features {
+            background: #e8eaf6;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #667eea;
+        }
+
+        .premium-features h3 {
+            color: #5a67d8;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .premium-features ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .premium-features li {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .rating-badge {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+    </style>
   </head>
   <body>
-    <h1>Welcome to Unblur Photo</h1>
-    <p>This site is under construction.</p>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="unblur-image-logo.png" alt="Unblur Image Logo" class="header-logo">
+                Unblur Image
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="unblur-image-logo.png" alt="Unblur Image Logo" class="hero-logo">
+                <h1>Remove Photo Blur</h1>
+                <p>Unblur Image: AI Remove Blur is your ultimate companion for removing blur from photos with AI-powered technology. Transform blurry images into crystal clear masterpieces with professional photo enhancement.</p>
+                <a href="https://apps.apple.com/us/app/unblur-image-ai-remove-blur/id6751783489" class="cta-button">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1704153600" alt="Download on the App Store" class="app-store-badge">
+                </a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Powerful AI Photo Enhancement Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>AI Blur Removal</h3>
+                        <p>Remove motion blur, camera shake, and focus blur with our advanced AI technology that analyzes and restores image clarity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>Professional Enhancement</h3>
+                        <p>Enhance image sharpness, clarity, and detail with professional-grade algorithms that preserve natural image quality.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Smart Restoration</h3>
+                        <p>Restore old photos, fix blurry images, and enhance photo quality with AI-powered restoration technology.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Easy to Use</h3>
+                        <p>Professional results with just a few taps. No complex editing skills required - just upload and enhance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>High Quality Output</h3>
+                        <p>Export your enhanced photos in high resolution, perfect for printing, social media, or professional use.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Processing</h3>
+                        <p>Get professional results in seconds with our optimized AI processing engine designed for mobile devices.</p>
+                    </div>
+                </div>
+
+                <div class="premium-features">
+                    <h3>🌟 Premium Features (In-App Purchase)</h3>
+                    <ul>
+                        <li>✅ Unlimited photo processing</li>
+                        <li>✅ Advanced blur removal algorithms</li>
+                        <li>✅ Batch photo processing</li>
+                        <li>✅ High-resolution exports</li>
+                        <li>✅ No watermarks</li>
+                        <li>✅ Priority processing</li>
+                        <li>✅ Weekly Plan: $4.99 (first week), then $9.99/week</li>
+                        <li>✅ Annual Plan: $50.00/year</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2>How Unblur Image Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Upload Your Photo</h3>
+                        <p>Take a photo or upload an existing blurry image from your gallery</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>AI Analysis</h3>
+                        <p>Our AI analyzes the blur type and determines the best enhancement approach</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Crystal Clear Result</h3>
+                        <p>Get your enhanced photo with removed blur and improved clarity instantly</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Users Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"Amazing app! My blurry photos are now crystal clear. Perfect for saving precious memories that were ruined by camera shake!"</p>
+                        <div class="testimonial-author">- Sarah M., Photography Enthusiast</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"The AI blur removal is incredible. I can finally fix all those blurry photos from my vacation!"</p>
+                        <div class="testimonial-author">- John D., Travel Blogger</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"As a professional photographer, this app is a lifesaver for fixing client photos. Highly recommended!"</p>
+                        <div class="testimonial-author">- Mike R., Professional Photographer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seo-content">
+            <div class="container">
+                <h2>The Ultimate AI-Powered Photo Blur Removal App</h2>
+                <p>Unblur Image: AI Remove Blur revolutionizes photo enhancement by bringing professional-grade blur removal capabilities to your mobile device. Whether you're dealing with motion blur, camera shake, or focus issues, our advanced AI technology transforms blurry photos into crystal clear masterpieces.</p>
+                
+                <p>Perfect for restoring old photos, fixing blurry images, enhancing social media posts, or simply making your photos look their best. Our AI-powered blur removal and enhancement tools deliver professional results without the need for expensive software or complex editing skills.</p>
+
+                <h2>Perfect for Photo Enhancement Worldwide</h2>
+                <p>Photography enthusiasts, professionals, and casual users worldwide trust Unblur Image for creating stunning clear imagery. The app supports various photo types and provides instant results, making it perfect for any photo enhancement need.</p>
+
+                <div class="keywords">
+                    <h3>Key Photo Enhancement Features</h3>
+                    <ul>
+                        <li>AI Blur Removal</li>
+                        <li>Photo Sharpening</li>
+                        <li>Image Restoration</li>
+                        <li>Clarity Enhancement</li>
+                        <li>High-Quality Export</li>
+                        <li>Instant Processing</li>
+                        <li>Easy Interface</li>
+                        <li>Mobile Optimized</li>
+                        <li>Professional Quality</li>
+                        <li>Social Media Ready</li>
+                        <li>Photo Recovery</li>
+                        <li>Image Enhancement</li>
+                    </ul>
+                </div>
+
+                <h2>Advanced AI Technology for Perfect Results</h2>
+                <p>Our proprietary machine learning algorithms have been specifically trained for photo blur removal, ensuring accurate enhancement and realistic results. The app continuously learns and improves, expanding its capabilities with regular updates.</p>
+
+                <p>Unblur Image works seamlessly on iPhone and iPad, making it perfect for use anywhere you want to enhance your photos. The app's intuitive interface ensures that users of all skill levels can create professional-quality results.</p>
+            </div>
+        </section>
+
+        <section id="download" class="cta-section">
+            <div class="container">
+                <h2>Start Creating Crystal Clear Photos Today</h2>
+                <p>Join thousands of users who trust Unblur Image for their photo enhancement needs</p>
+                <a href="https://apps.apple.com/us/app/unblur-image-ai-remove-blur/id6751783489" class="cta-button">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1704153600" alt="Download on the App Store" class="app-store-badge">
+                </a>
+                <br><br>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Compatible with iPhone and iPad • iOS 15.0+ Required • Free with Premium Options</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="mailto:asilarslan93@gmail.com">Support</a>
+                <a href="terms-of-use.html">Terms of Use</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="https://apps.apple.com/us/app/unblur-image-ai-remove-blur/id6751783489">App Store</a>
+            </div>
+            <p>&copy; 2025 Unblur Image by Asil Arslan. All rights reserved.</p>
+            <p>Remove photo blur with AI-powered technology.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            console.log('Menu toggle clicked');
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) {
+                navLinks.classList.toggle('active');
+                console.log('Menu active state:', navLinks.classList.contains('active'));
+            }
+        }
+
+        // Close menu when clicking on a link
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    document.getElementById('navLinks').classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const nav = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+                if (nav && hamburger && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Add to Home Screen Prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            // Show install button or banner here if needed
+        });
+    </script>
   </body>
 </html>

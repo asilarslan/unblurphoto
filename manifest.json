@@ -1,0 +1,61 @@
+{
+  "name": "Unblur Image: AI Remove Blur",
+  "short_name": "Unblur Image",
+  "description": "Remove blur from photos with AI-powered technology. Professional photo enhancement and blur removal for crystal clear images.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["photography", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "unblur-image-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "unblur-image-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "unblur-image-logo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Unblur Image Landing Page"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://unblurphoto.app/"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/us/app/unblur-image-ai-remove-blur/id6751783489"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Download App",
+      "short_name": "Download",
+      "description": "Download Unblur Image from App Store",
+      "url": "https://apps.apple.com/us/app/unblur-image-ai-remove-blur/id6751783489",
+      "icons": [
+        {
+          "src": "unblur-image-logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
