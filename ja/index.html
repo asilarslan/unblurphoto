@@ -162,9 +162,15 @@ a.card .more { color: var(--brand); font-weight: 600; font-size: .95rem; margin-
 .bar { height: 6px; background: var(--soft); border-radius: 6px; overflow: hidden; margin-top: 6px; }
 .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--brand), var(--brand-2)); transition: width .15s; }
 .tool .note { font-size: .85rem; color: var(--muted); margin-top: 14px; }
-.tool .upsell { margin-top: 16px; padding: 14px; border-radius: 14px; background: linear-gradient(135deg, #eef0ff, #f6ecff); }
-.tool .upsell strong { display: block; margin-bottom: 8px; }
-.tool .upsell .badge img { height: 44px; }
+.tool .upsell { margin-top: 16px; padding: 16px; border-radius: 16px; background: linear-gradient(135deg, #eef0ff, #f6ecff); border: 2px solid transparent; }
+.tool .upsell strong { display: block; font-size: 1.1rem; }
+.tool .upsell p { font-size: .9rem; color: var(--muted); margin: 4px 0 12px; }
+.tool .upsell .btn { width: 100%; padding: 0 14px; font-size: .95rem; white-space: nowrap; }
+.tool .upsell.pulse { animation: pulse 1.6s ease-out 2; border-color: var(--brand); }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(91,91,214,.55); } 100% { box-shadow: 0 0 0 16px rgba(91,91,214,0); } }
+.qr-mini { display: none; align-items: center; gap: 10px; margin-top: 12px; font-size: .82rem; color: var(--muted); }
+.qr-mini img { width: 72px; height: 72px; background: #fff; border-radius: 8px; }
+@media (min-width: 900px) and (hover: hover) { .qr-mini { display: flex; } }
 .tool .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .tool .actions .btn { min-height: 46px; flex: 1 1 140px; }
 [hidden] { display: none !important; }
@@ -200,9 +206,9 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <section class="hero" data-hero><div class="wrap">
 <div>
 <a class="eyebrow" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-rating-ja&mt=8" rel="noopener"><span class="stars">★★★★★</span> App Store評価 4.7（29件）</a>
-<h1>ぼやけた写真を数秒で鮮明に</h1>
-<p class="sub">無料のオンライン補正ツールをこのページですぐに試せます。処理はブラウザ内で行われ、写真がアップロードされることはありません。最高の仕上がりが必要なときは、iPhoneアプリ「Unblur Image」がAIで失われたディテールをフル解像度で復元します。</p>
-<div class="ctas"><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-hero-ja&mt=8" rel="noopener"><img src="/assets/img/app-store-ja-jp.svg" alt="Download on the App Store" width="162" height="54"></a><a class="btn btn-ghost" href="#free-tool">無料で試す ↓</a></div>
+<h1>ぼやけた写真をiPhoneでAI補正</h1>
+<p class="sub">Unblur Imageなら、ぼやけ・手ぶれ・ピンボケの写真をワンタップでフル解像度のまま復元できます。iPhone・iPad向けに無料でダウンロード。</p>
+<div class="ctas"><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-hero-ja&mt=8" rel="noopener"><img src="/assets/img/app-store-ja-jp.svg" alt="Download on the App Store" width="162" height="54"></a><a class="btn btn-ghost" href="#free-tool">まずはオンラインでお試し ↓</a></div>
 <p class="compat">iPhone・iPad対応 · iOS 17.6以降 · 無料ダウンロード（Premiumは任意）</p>
 <div class="qr"><img src="/assets/img/qr-app-store.svg" alt="QR code" width="84" height="84"><span>iPhoneのカメラで読み取るとApp Storeが開きます</span></div>
 </div>
@@ -215,7 +221,7 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 </div></section>
 
 <section id="free-tool" class="alt"><div class="wrap">
-<div class="center"><h2>無料オンライン写真ぼかし補正ツール</h2><p class="lead">ぼやけた写真を選び、ぼけの種類を指定してください。プレビューは古典的なデコンボリューションにより端末内で補正されます。アカウント登録もアップロードも待ち時間もありません。</p></div>
+<div class="center"><h2>無料オンライン写真ぼかし補正ツール</h2><p class="lead">簡単な補正でどこまで変わるか確認できます。プレビューは端末内で処理され、何もアップロードされません。フル解像度のAI補正は無料のiPhoneアプリで。</p></div>
 <div class="tool" data-tool data-worker="/assets/deblur-worker.js?v=89883905" data-sample="/assets/img/sample-blurry.webp">
 <script type="application/json" class="tool-i18n">{"processing": "補正中… {p}%", "done": "完了。スライダーを動かして比較できます。", "error": "画像を開けませんでした。JPGまたはPNGをお試しください。"}</script>
 <div class="drop" data-drop role="button" tabindex="0">
@@ -234,10 +240,11 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <div class="ctl"><label>ぼけの強さ <span data-strength-val>50</span></label><input type="range" min="0" max="100" value="50" data-strength aria-label="ぼけの強さ"></div>
 <div class="ctl" data-angle-row hidden><label>ぶれの方向 <span data-angle-val>0°</span></label><input type="range" min="0" max="175" step="5" value="0" data-angle aria-label="ぶれの方向"></div>
 <div class="status" data-status aria-live="polite"></div><div class="bar"><i></i></div>
-<div class="actions"><a class="btn btn-primary" data-download download="unblurred-preview.jpg" href="#" aria-disabled="true">プレビューを保存</a>
-<button type="button" class="btn btn-ghost" data-new>別の写真を試す</button></div>
-<div class="upsell"><strong>もっと鮮明でフル解像度の仕上がりにしたい方は</strong><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-tool-ja&mt=8" rel="noopener"><img src="/assets/img/app-store-ja-jp.svg" alt="Download on the App Store" width="162" height="54"></a></div>
-<p class="note">無料プレビュー：最大1000px・透かし入り・古典的デコンボリューション。アプリではAIでより強力なフル解像度補正が可能です。</p>
+<div class="upsell" data-upsell><strong>AIによる本格補正はアプリで</strong><p>フル解像度・透かしなし・写真に保存・AIが顔や細部を再構成</p>
+<a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-tool-ja&mt=8" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9c-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>App Storeで無料ダウンロード</a>
+<div class="qr-mini"><img src="/assets/img/qr-app-store.svg" alt="QR code" width="72" height="72" loading="lazy"><span>iPhoneのカメラで読み取るとApp Storeが開きます</span></div></div>
+<div class="actions"><button type="button" class="btn btn-ghost" data-new>別の写真を試す</button></div>
+<p class="note">これは低解像度・透かし入りの簡易プレビューで、保存はできません。フル画質の写真はアプリのAI補正で得られます。</p>
 </div></div></div>
 </div></section>
 
@@ -253,7 +260,7 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <div class="shots"><img src="/assets/img/screen-1.webp" alt="ぼやけた写真・出力形式・強さの選択" width="430" height="934" loading="lazy"><img src="/assets/img/screen-2.webp" alt="保存・共有できる補正済みの写真" width="430" height="934" loading="lazy"><img src="/assets/img/screen-3.webp" alt="補正した画像の履歴" width="430" height="934" loading="lazy"></div>
 </div></section>
 
-<section id="faq"><div class="wrap narrow"><h2>よくある質問</h2><div class="faq"><details><summary>オンラインツールは本当に無料ですか？</summary><p>はい。すべてブラウザ内で動作し、登録も不要です。プレビューは長辺1000ピクセルまでで、小さな透かしが入ります。</p></details><details><summary>無料ツールとiPhoneアプリの違いは？</summary><p>オンラインツールは古典的なデコンボリューション（Richardson–Lucy法）を使い、軽いピンボケや被写体ぶれに有効です。アプリは失われたディテールを再構成するAIモデルを使い、強いぼけにも対応し、元の解像度のままJPG・PNG・WebPで書き出せます。</p></details><details><summary>写真はアップロードされますか？</summary><p>オンラインツールではアップロードされません。写真が端末の外に出ることはありません。アプリではAI処理を安全なサーバーで行い、処理後に写真を削除します。詳しくはプライバシーポリシーをご覧ください。</p></details><details><summary>どんなにぼやけた写真でも直せますか？</summary><p>軽度から中程度のぼけで最も効果を発揮します。非常に強いぼけでは、AIが自然なディテールを生成しますが、元の写真と完全に一致するとは限りません。顔や小さな文字は確認してください。</p></details><details><summary>対応端末は？</summary><p>iOS 17.6以降のiPhoneとiPadです。Android版はまだありません。Androidやパソコンでは無料のオンラインツールをお使いください。</p></details><details><summary>アプリは日本語に対応していますか？</summary><p>現在アプリの表示は英語です。操作は写真を選ぶ、「Remove Blur with AI」をタップする、保存するの3ステップだけです。</p></details><details><summary>アプリの料金は？</summary><p>ダウンロードは無料です。Premiumサブスクリプションでは補正回数の無制限化、すべての出力形式、履歴機能が使えます。最新の価格は購入前にアプリ内で表示されます。</p></details></div></div></section>
+<section id="faq"><div class="wrap narrow"><h2>よくある質問</h2><div class="faq"><details><summary>オンラインツールは本当に無料ですか？</summary><p>はい、プレビューは無料で登録も不要です。低解像度・透かし入りで保存はできません。フル画質の結果はiPhoneアプリで得られます。</p></details><details><summary>無料ツールとiPhoneアプリの違いは？</summary><p>オンラインツールは古典的なデコンボリューション（Richardson–Lucy法）を使い、軽いピンボケや被写体ぶれに有効です。アプリは失われたディテールを再構成するAIモデルを使い、強いぼけにも対応し、元の解像度のままJPG・PNG・WebPで書き出せます。</p></details><details><summary>写真はアップロードされますか？</summary><p>オンラインツールではアップロードされません。写真が端末の外に出ることはありません。アプリではAI処理を安全なサーバーで行い、処理後に写真を削除します。詳しくはプライバシーポリシーをご覧ください。</p></details><details><summary>どんなにぼやけた写真でも直せますか？</summary><p>軽度から中程度のぼけで最も効果を発揮します。非常に強いぼけでは、AIが自然なディテールを生成しますが、元の写真と完全に一致するとは限りません。顔や小さな文字は確認してください。</p></details><details><summary>対応端末は？</summary><p>iOS 17.6以降のiPhoneとiPadです。Android版はまだありません。Androidやパソコンでは無料のオンラインツールをお使いください。</p></details><details><summary>アプリは日本語に対応していますか？</summary><p>現在アプリの表示は英語です。操作は写真を選ぶ、「Remove Blur with AI」をタップする、保存するの3ステップだけです。</p></details><details><summary>アプリの料金は？</summary><p>ダウンロードは無料です。Premiumサブスクリプションでは補正回数の無制限化、すべての出力形式、履歴機能が使えます。最新の価格は購入前にアプリ内で表示されます。</p></details></div></div></section>
 
 <section><div class="wrap"><div class="cta-band">
 <h2>ぼやけた写真をよみがえらせよう</h2><p>フル解像度のAI補正をiPhoneで。</p>
@@ -273,7 +280,7 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <li><a href="/terms-of-use.html">利用規約</a></li></ul>
 <p style="margin-top:12px">© 2026 Unblur Image</p></div>
 </div></footer>
-<div class="sticky-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-sticky-ja&mt=8" rel="noopener">アプリを入手</a></div>
-<script src="/assets/site.js?v=03a60a42" defer></script><script src="/assets/tool.js?v=6bccd2ad" defer></script>
+<div class="sticky-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-sticky-ja&mt=8" rel="noopener">App Storeで無料ダウンロード</a></div>
+<script src="/assets/site.js?v=03a60a42" defer></script><script src="/assets/tool.js?v=0a2247e5" defer></script>
 </body>
 </html>

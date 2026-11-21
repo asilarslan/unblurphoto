@@ -3,12 +3,12 @@
   var root = document.querySelector('[data-tool]');
   if (!root) return;
   var T = JSON.parse(root.querySelector('.tool-i18n').textContent);
-  var MAX_SIDE = 1000;
+  var MAX_SIDE = 640; // preview only: the app delivers full resolution
   var $ = function (s) { return root.querySelector(s); };
   var drop = $('[data-drop]'), input = drop.querySelector('input'), start = $('[data-start]'), work = $('[data-work]');
   var slider = $('[data-result]'), imgBefore = slider.querySelector('.ba-before'), imgAfter = slider.querySelector('.ba-after');
   var strength = $('[data-strength]'), strengthVal = $('[data-strength-val]'), angle = $('[data-angle]'), angleVal = $('[data-angle-val]'), angleRow = $('[data-angle-row]');
-  var status = $('[data-status]'), bar = $('.bar i'), dl = $('[data-download]');
+  var status = $('[data-status]'), bar = $('.bar i'), upsell = $('[data-upsell]');
   var mode = (root.querySelector('[data-mode][aria-pressed="true"]') || {}).dataset.mode || 'focus', source = null, worker = null, timer = null, afterUrl = null, beforeUrl = null;
 
   function setStatus(msg, p) { status.textContent = msg; bar.style.width = Math.round((p || 0) * 100) + '%'; }
@@ -55,27 +55,37 @@
     var ctx = source.getContext('2d');
     var data = ctx.getImageData(0, 0, source.width, source.height);
     setStatus(T.processing.replace('{p}', '0'), 0);
-    dl.setAttribute('aria-disabled', 'true');
+    root.removeAttribute('data-done');
     worker.onmessage = function (e) {
       if (e.data.type === 'progress') { setStatus(T.processing.replace('{p}', Math.round(e.data.value * 100)), e.data.value); return; }
       var out = document.createElement('canvas');
       out.width = e.data.width; out.height = e.data.height;
       var octx = out.getContext('2d');
       octx.putImageData(new ImageData(e.data.data, e.data.width, e.data.height), 0, 0);
-      var fs = Math.max(12, Math.round(out.width / 40));
-      octx.font = '600 ' + fs + 'px -apple-system, Segoe UI, sans-serif';
-      octx.textAlign = 'right'; octx.textBaseline = 'bottom';
-      octx.fillStyle = 'rgba(0,0,0,.45)';
-      octx.fillText('unblurphoto.app · preview', out.width - fs * 0.6 + 1, out.height - fs * 0.5 + 1);
-      octx.fillStyle = 'rgba(255,255,255,.85)';
-      octx.fillText('unblurphoto.app · preview', out.width - fs * 0.6, out.height - fs * 0.5);
+      // Tiled diagonal watermark: good enough to judge sharpness, not to keep.
+      var fs = Math.max(14, Math.round(out.width / 18));
+      octx.save();
+      octx.translate(out.width / 2, out.height / 2);
+      octx.rotate(-Math.PI / 6);
+      octx.font = '700 ' + fs + 'px -apple-system, Segoe UI, sans-serif';
+      octx.textAlign = 'center'; octx.textBaseline = 'middle';
+      octx.fillStyle = 'rgba(255,255,255,.28)';
+      octx.strokeStyle = 'rgba(0,0,0,.18)'; octx.lineWidth = 1;
+      var span = Math.hypot(out.width, out.height);
+      for (var y = -span / 2, row = 0; y < span / 2; y += fs * 3, row++) {
+        for (var x = -span / 2 + (row % 2) * fs * 6; x < span / 2; x += fs * 12) {
+          octx.fillText('unblurphoto.app', x, y);
+          octx.strokeText('unblurphoto.app', x, y);
+        }
+      }
+      octx.restore();
       out.toBlob(function (b) {
         if (afterUrl) URL.revokeObjectURL(afterUrl);
         afterUrl = URL.createObjectURL(b);
         imgAfter.src = afterUrl;
-        dl.href = afterUrl;
-        dl.removeAttribute('aria-disabled');
+        root.setAttribute('data-done', '');
         setStatus(T.done, 1);
+        upsell.classList.remove('pulse'); void upsell.offsetWidth; upsell.classList.add('pulse');
       }, 'image/jpeg', 0.9);
       worker.terminate(); worker = null;
     };
@@ -84,6 +94,7 @@
 
   function schedule() { clearTimeout(timer); timer = setTimeout(run, 350); }
 
+  slider.addEventListener('contextmenu', function (e) { e.preventDefault(); });
   drop.addEventListener('click', function () { input.click(); });
   drop.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } });
   input.addEventListener('change', function () { onFile(input.files[0]); input.value = ''; });
@@ -110,5 +121,4 @@
   });
   strength.addEventListener('input', function () { strengthVal.textContent = strength.value; schedule(); });
   angle.addEventListener('input', function () { angleVal.textContent = angle.value + '°'; schedule(); });
-  dl.addEventListener('click', function (e) { if (dl.getAttribute('aria-disabled') === 'true') e.preventDefault(); });
 })();

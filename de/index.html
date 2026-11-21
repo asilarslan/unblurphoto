@@ -162,9 +162,15 @@ a.card .more { color: var(--brand); font-weight: 600; font-size: .95rem; margin-
 .bar { height: 6px; background: var(--soft); border-radius: 6px; overflow: hidden; margin-top: 6px; }
 .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--brand), var(--brand-2)); transition: width .15s; }
 .tool .note { font-size: .85rem; color: var(--muted); margin-top: 14px; }
-.tool .upsell { margin-top: 16px; padding: 14px; border-radius: 14px; background: linear-gradient(135deg, #eef0ff, #f6ecff); }
-.tool .upsell strong { display: block; margin-bottom: 8px; }
-.tool .upsell .badge img { height: 44px; }
+.tool .upsell { margin-top: 16px; padding: 16px; border-radius: 16px; background: linear-gradient(135deg, #eef0ff, #f6ecff); border: 2px solid transparent; }
+.tool .upsell strong { display: block; font-size: 1.1rem; }
+.tool .upsell p { font-size: .9rem; color: var(--muted); margin: 4px 0 12px; }
+.tool .upsell .btn { width: 100%; padding: 0 14px; font-size: .95rem; white-space: nowrap; }
+.tool .upsell.pulse { animation: pulse 1.6s ease-out 2; border-color: var(--brand); }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(91,91,214,.55); } 100% { box-shadow: 0 0 0 16px rgba(91,91,214,0); } }
+.qr-mini { display: none; align-items: center; gap: 10px; margin-top: 12px; font-size: .82rem; color: var(--muted); }
+.qr-mini img { width: 72px; height: 72px; background: #fff; border-radius: 8px; }
+@media (min-width: 900px) and (hover: hover) { .qr-mini { display: flex; } }
 .tool .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .tool .actions .btn { min-height: 46px; flex: 1 1 140px; }
 [hidden] { display: none !important; }
@@ -200,9 +206,9 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <section class="hero" data-hero><div class="wrap">
 <div>
 <a class="eyebrow" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-rating-de&mt=8" rel="noopener"><span class="stars">★★★★★</span> 4,7 im App Store · 29 Bewertungen</a>
-<h1>Unscharfe Fotos in Sekunden scharf machen</h1>
-<p class="sub">Probier das kostenlose Online-Tool direkt hier aus. Es läuft in deinem Browser und lädt nichts hoch. Für das schärfste Ergebnis stellt die iPhone-App Unblur Image verlorene Details per KI in voller Auflösung wieder her.</p>
-<div class="ctas"><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-hero-de&mt=8" rel="noopener"><img src="/assets/img/app-store-de-de.svg" alt="Download on the App Store" width="162" height="54"></a><a class="btn btn-ghost" href="#free-tool">Kostenlos online testen ↓</a></div>
+<h1>Unscharfe Fotos mit KI auf dem iPhone retten</h1>
+<p class="sub">Unblur Image stellt unscharfe, verwackelte und falsch fokussierte Fotos mit einem Tipp in voller Auflösung wieder her. Kostenlos für iPhone und iPad.</p>
+<div class="ctas"><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-hero-de&mt=8" rel="noopener"><img src="/assets/img/app-store-de-de.svg" alt="Download on the App Store" width="162" height="54"></a><a class="btn btn-ghost" href="#free-tool">Oder kurz online testen ↓</a></div>
 <p class="compat">iPhone &amp; iPad · ab iOS 17.6 · Kostenloser Download, optional Premium</p>
 <div class="qr"><img src="/assets/img/qr-app-store.svg" alt="QR code" width="84" height="84"><span>Mit der iPhone-Kamera scannen, um den App Store zu öffnen</span></div>
 </div>
@@ -215,7 +221,7 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 </div></section>
 
 <section id="free-tool" class="alt"><div class="wrap">
-<div class="center"><h2>Kostenloses Online-Tool zum Schärfen von Fotos</h2><p class="lead">Wähle ein unscharfes Foto und die Art der Unschärfe. Die Vorschau wird direkt auf deinem Gerät per klassischer Dekonvolution geschärft – ohne Konto, ohne Upload, ohne Warteschlange.</p></div>
+<div class="center"><h2>Kostenloses Online-Tool zum Schärfen von Fotos</h2><p class="lead">Sieh dir an, was schnelles Schärfen bewirkt. Die Vorschau läuft auf deinem Gerät, nichts wird hochgeladen. Das echte KI-Ergebnis in voller Auflösung bekommst du mit der kostenlosen iPhone-App.</p></div>
 <div class="tool" data-tool data-worker="/assets/deblur-worker.js?v=89883905" data-sample="/assets/img/sample-blurry.webp">
 <script type="application/json" class="tool-i18n">{"processing": "Wird geschärft … {p} %", "done": "Fertig. Zum Vergleichen den Regler ziehen.", "error": "Das Bild konnte nicht geöffnet werden. Versuche JPG oder PNG."}</script>
 <div class="drop" data-drop role="button" tabindex="0">
@@ -234,10 +240,11 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <div class="ctl"><label>Stärke der Unschärfe <span data-strength-val>50</span></label><input type="range" min="0" max="100" value="50" data-strength aria-label="Stärke der Unschärfe"></div>
 <div class="ctl" data-angle-row hidden><label>Richtung der Unschärfe <span data-angle-val>0°</span></label><input type="range" min="0" max="175" step="5" value="0" data-angle aria-label="Richtung der Unschärfe"></div>
 <div class="status" data-status aria-live="polite"></div><div class="bar"><i></i></div>
-<div class="actions"><a class="btn btn-primary" data-download download="unblurred-preview.jpg" href="#" aria-disabled="true">Vorschau herunterladen</a>
-<button type="button" class="btn btn-ghost" data-new>Anderes Foto testen</button></div>
-<div class="upsell"><strong>Schärferes Ergebnis in voller Auflösung?</strong><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-tool-de&mt=8" rel="noopener"><img src="/assets/img/app-store-de-de.svg" alt="Download on the App Store" width="162" height="54"></a></div>
-<p class="note">Kostenlose Vorschau: bis 1000 px, mit Wasserzeichen, klassische Dekonvolution. Die App nutzt KI für stärkere Ergebnisse in voller Auflösung.</p>
+<div class="upsell" data-upsell><strong>Das volle KI-Ergebnis gibt's in der App</strong><p>Volle Auflösung · Kein Wasserzeichen · In Fotos sichern · KI rekonstruiert Gesichter und Details</p>
+<a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-tool-de&mt=8" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9c-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>Kostenlos im App Store laden</a>
+<div class="qr-mini"><img src="/assets/img/qr-app-store.svg" alt="QR code" width="72" height="72" loading="lazy"><span>Mit der iPhone-Kamera scannen, um den App Store zu öffnen</span></div></div>
+<div class="actions"><button type="button" class="btn btn-ghost" data-new>Anderes Foto testen</button></div>
+<p class="note">Das ist eine schnelle Vorschau in niedriger Auflösung mit Wasserzeichen und kann nicht gespeichert werden. Die App liefert per KI das Foto in voller Qualität.</p>
 </div></div></div>
 </div></section>
 
@@ -253,7 +260,7 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <div class="shots"><img src="/assets/img/screen-1.webp" alt="Unscharfes Foto, Ausgabeformat und Stärke wählen" width="430" height="934" loading="lazy"><img src="/assets/img/screen-2.webp" alt="Wiederhergestelltes Foto zum Sichern oder Teilen" width="430" height="934" loading="lazy"><img src="/assets/img/screen-3.webp" alt="Verlauf der wiederhergestellten Bilder" width="430" height="934" loading="lazy"></div>
 </div></section>
 
-<section id="faq"><div class="wrap narrow"><h2>Häufige Fragen</h2><div class="faq"><details><summary>Ist das Online-Tool wirklich kostenlos?</summary><p>Ja. Es läuft komplett in deinem Browser, ohne Anmeldung. Vorschauen sind auf 1000 Pixel an der längsten Seite begrenzt und tragen ein kleines Wasserzeichen.</p></details><details><summary>Was ist der Unterschied zwischen Tool und App?</summary><p>Das Online-Tool nutzt klassische Dekonvolution (Richardson–Lucy) und hilft bei leichter Fokus- oder Bewegungsunschärfe. Die App nutzt ein KI-Modell, das verlorene Details rekonstruiert, auch stärkere Unschärfe bewältigt, die Originalauflösung behält und als JPG, PNG oder WebP exportiert.</p></details><details><summary>Werden meine Fotos hochgeladen?</summary><p>Beim Online-Tool nicht – das Foto verlässt dein Gerät nie. In der App läuft der KI-Schritt auf einem sicheren Server; das Foto wird nach der Verarbeitung gelöscht. Details in der Datenschutzerklärung.</p></details><details><summary>Kann es jedes unscharfe Foto retten?</summary><p>Am besten klappt es bei leichter bis mittlerer Unschärfe. Bei sehr starker Unschärfe erzeugt die KI plausible Details, die nicht exakt dem Original entsprechen müssen – prüfe Gesichter und kleinen Text.</p></details><details><summary>Welche Geräte werden unterstützt?</summary><p>iPhone und iPad ab iOS 17.6. Eine Android-App gibt es noch nicht; Android- und Desktop-Nutzer können das kostenlose Online-Tool verwenden.</p></details><details><summary>Ist die App auf Deutsch?</summary><p>Die Oberfläche der App ist derzeit auf Englisch. Die Bedienung besteht aus drei Schritten: Foto wählen, „Remove Blur with AI“ tippen, sichern.</p></details><details><summary>Was kostet die App?</summary><p>Der Download ist kostenlos. Ein Premium-Abo bietet unbegrenzte Wiederherstellungen, alle Ausgabeformate und den kompletten Verlauf. Der aktuelle Preis wird vor dem Kauf in der App angezeigt.</p></details></div></div></section>
+<section id="faq"><div class="wrap narrow"><h2>Häufige Fragen</h2><div class="faq"><details><summary>Ist das Online-Tool wirklich kostenlos?</summary><p>Ja, die Vorschau ist kostenlos und ohne Anmeldung. Sie hat eine niedrige Auflösung, ein Wasserzeichen und kann nicht gespeichert werden; das Ergebnis in voller Qualität liefert die iPhone-App.</p></details><details><summary>Was ist der Unterschied zwischen Tool und App?</summary><p>Das Online-Tool nutzt klassische Dekonvolution (Richardson–Lucy) und hilft bei leichter Fokus- oder Bewegungsunschärfe. Die App nutzt ein KI-Modell, das verlorene Details rekonstruiert, auch stärkere Unschärfe bewältigt, die Originalauflösung behält und als JPG, PNG oder WebP exportiert.</p></details><details><summary>Werden meine Fotos hochgeladen?</summary><p>Beim Online-Tool nicht – das Foto verlässt dein Gerät nie. In der App läuft der KI-Schritt auf einem sicheren Server; das Foto wird nach der Verarbeitung gelöscht. Details in der Datenschutzerklärung.</p></details><details><summary>Kann es jedes unscharfe Foto retten?</summary><p>Am besten klappt es bei leichter bis mittlerer Unschärfe. Bei sehr starker Unschärfe erzeugt die KI plausible Details, die nicht exakt dem Original entsprechen müssen – prüfe Gesichter und kleinen Text.</p></details><details><summary>Welche Geräte werden unterstützt?</summary><p>iPhone und iPad ab iOS 17.6. Eine Android-App gibt es noch nicht; Android- und Desktop-Nutzer können das kostenlose Online-Tool verwenden.</p></details><details><summary>Ist die App auf Deutsch?</summary><p>Die Oberfläche der App ist derzeit auf Englisch. Die Bedienung besteht aus drei Schritten: Foto wählen, „Remove Blur with AI“ tippen, sichern.</p></details><details><summary>Was kostet die App?</summary><p>Der Download ist kostenlos. Ein Premium-Abo bietet unbegrenzte Wiederherstellungen, alle Ausgabeformate und den kompletten Verlauf. Der aktuelle Preis wird vor dem Kauf in der App angezeigt.</p></details></div></div></section>
 
 <section><div class="wrap"><div class="cta-band">
 <h2>Hol deine unscharfen Fotos zurück</h2><p>Das KI-Ergebnis in voller Auflösung – auf deinem iPhone.</p>
@@ -273,7 +280,7 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <li><a href="/terms-of-use.html">Nutzungsbedingungen</a></li></ul>
 <p style="margin-top:12px">© 2026 Unblur Image</p></div>
 </div></footer>
-<div class="sticky-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-sticky-de&mt=8" rel="noopener">App laden</a></div>
-<script src="/assets/site.js?v=03a60a42" defer></script><script src="/assets/tool.js?v=6bccd2ad" defer></script>
+<div class="sticky-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-sticky-de&mt=8" rel="noopener">Kostenlos im App Store laden</a></div>
+<script src="/assets/site.js?v=03a60a42" defer></script><script src="/assets/tool.js?v=0a2247e5" defer></script>
 </body>
 </html>

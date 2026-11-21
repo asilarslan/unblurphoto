@@ -133,9 +133,15 @@ a.card .more { color: var(--brand); font-weight: 600; font-size: .95rem; margin-
 .bar { height: 6px; background: var(--soft); border-radius: 6px; overflow: hidden; margin-top: 6px; }
 .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--brand), var(--brand-2)); transition: width .15s; }
 .tool .note { font-size: .85rem; color: var(--muted); margin-top: 14px; }
-.tool .upsell { margin-top: 16px; padding: 14px; border-radius: 14px; background: linear-gradient(135deg, #eef0ff, #f6ecff); }
-.tool .upsell strong { display: block; margin-bottom: 8px; }
-.tool .upsell .badge img { height: 44px; }
+.tool .upsell { margin-top: 16px; padding: 16px; border-radius: 16px; background: linear-gradient(135deg, #eef0ff, #f6ecff); border: 2px solid transparent; }
+.tool .upsell strong { display: block; font-size: 1.1rem; }
+.tool .upsell p { font-size: .9rem; color: var(--muted); margin: 4px 0 12px; }
+.tool .upsell .btn { width: 100%; padding: 0 14px; font-size: .95rem; white-space: nowrap; }
+.tool .upsell.pulse { animation: pulse 1.6s ease-out 2; border-color: var(--brand); }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(91,91,214,.55); } 100% { box-shadow: 0 0 0 16px rgba(91,91,214,0); } }
+.qr-mini { display: none; align-items: center; gap: 10px; margin-top: 12px; font-size: .82rem; color: var(--muted); }
+.qr-mini img { width: 72px; height: 72px; background: #fff; border-radius: 8px; }
+@media (min-width: 900px) and (hover: hover) { .qr-mini { display: flex; } }
 .tool .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .tool .actions .btn { min-height: 46px; flex: 1 1 140px; }
 [hidden] { display: none !important; }

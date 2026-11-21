@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Free Online Unblur Tool – Sharpen Blurry Photos, No Upload</title>
-<meta name="description" content="Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after slider and instant download.">
+<meta name="description" content="Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after preview, then full-resolution AI results in the iPhone app.">
 <link rel="canonical" href="https://unblurphoto.app/free-unblur-tool/">
 
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="Unblur Image">
 <meta property="og:url" content="https://unblurphoto.app/free-unblur-tool/">
 <meta property="og:title" content="Free Online Unblur Tool – Sharpen Blurry Photos, No Upload">
-<meta property="og:description" content="Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after slider and instant download.">
+<meta property="og:description" content="Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after preview, then full-resolution AI results in the iPhone app.">
 <meta property="og:image" content="https://unblurphoto.app/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Online Unblur Tool – Sharpen Blurry Photos, No Upload">
-<meta name="twitter:description" content="Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after slider and instant download.">
+<meta name="twitter:description" content="Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after preview, then full-resolution AI results in the iPhone app.">
 <meta name="twitter:image" content="https://unblurphoto.app/assets/img/og.jpg">
 <link rel="icon" href="/assets/img/icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
@@ -162,9 +162,15 @@ a.card .more { color: var(--brand); font-weight: 600; font-size: .95rem; margin-
 .bar { height: 6px; background: var(--soft); border-radius: 6px; overflow: hidden; margin-top: 6px; }
 .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--brand), var(--brand-2)); transition: width .15s; }
 .tool .note { font-size: .85rem; color: var(--muted); margin-top: 14px; }
-.tool .upsell { margin-top: 16px; padding: 14px; border-radius: 14px; background: linear-gradient(135deg, #eef0ff, #f6ecff); }
-.tool .upsell strong { display: block; margin-bottom: 8px; }
-.tool .upsell .badge img { height: 44px; }
+.tool .upsell { margin-top: 16px; padding: 16px; border-radius: 16px; background: linear-gradient(135deg, #eef0ff, #f6ecff); border: 2px solid transparent; }
+.tool .upsell strong { display: block; font-size: 1.1rem; }
+.tool .upsell p { font-size: .9rem; color: var(--muted); margin: 4px 0 12px; }
+.tool .upsell .btn { width: 100%; padding: 0 14px; font-size: .95rem; white-space: nowrap; }
+.tool .upsell.pulse { animation: pulse 1.6s ease-out 2; border-color: var(--brand); }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(91,91,214,.55); } 100% { box-shadow: 0 0 0 16px rgba(91,91,214,0); } }
+.qr-mini { display: none; align-items: center; gap: 10px; margin-top: 12px; font-size: .82rem; color: var(--muted); }
+.qr-mini img { width: 72px; height: 72px; background: #fff; border-radius: 8px; }
+@media (min-width: 900px) and (hover: hover) { .qr-mini { display: flex; } }
 .tool .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .tool .actions .btn { min-height: 46px; flex: 1 1 140px; }
 [hidden] { display: none !important; }
@@ -220,10 +226,11 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <div class="ctl"><label>Blur strength <span data-strength-val>50</span></label><input type="range" min="0" max="100" value="50" data-strength aria-label="Blur strength"></div>
 <div class="ctl" data-angle-row hidden><label>Blur direction <span data-angle-val>0°</span></label><input type="range" min="0" max="175" step="5" value="0" data-angle aria-label="Blur direction"></div>
 <div class="status" data-status aria-live="polite"></div><div class="bar"><i></i></div>
-<div class="actions"><a class="btn btn-primary" data-download download="unblurred-preview.jpg" href="#" aria-disabled="true">Download preview</a>
-<button type="button" class="btn btn-ghost" data-new>Try another photo</button></div>
-<div class="upsell"><strong>Want a sharper, full-resolution result?</strong><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-tool-en&mt=8" rel="noopener"><img src="/assets/img/app-store-en-us.svg" alt="Download on the App Store" width="162" height="54"></a></div>
-<p class="note">Free preview: up to 1000 px, watermarked, classic deconvolution. The app uses AI for stronger, full-resolution results.</p>
+<div class="upsell" data-upsell><strong>The full AI result is in the app</strong><p>Full resolution · No watermark · Save to Photos · AI rebuilds faces and fine detail</p>
+<a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-tool-en&mt=8" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9c-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>Download free on the App Store</a>
+<div class="qr-mini"><img src="/assets/img/qr-app-store.svg" alt="QR code" width="72" height="72" loading="lazy"><span>Scan with your iPhone camera to open the App Store</span></div></div>
+<div class="actions"><button type="button" class="btn btn-ghost" data-new>Try another photo</button></div>
+<p class="note">This is a quick, low-resolution preview with a watermark, and it can't be saved. The app uses AI to give you the full-quality photo.</p>
 </div></div></div></div></section>
 <section style="padding-top:24px"><div class="wrap narrow prose">
 
@@ -238,13 +245,13 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <p>The Unblur Image iPhone app goes further: an AI model reconstructs lost detail in faces, hair and textures, and the result keeps your photo's original resolution.</p>
 <h2>Limits of the free preview</h2>
 <ul>
-  <li>Output up to 1000 pixels on the longest side, with a small watermark.</li>
+  <li>A low-resolution, watermarked preview that can't be saved. The full-quality result comes from the iPhone app.</li>
   <li>Works best on mild to moderate, uniform blur.</li>
   <li>Some browsers can't open HEIC; on iPhone, Safari can.</li>
 </ul>
 
 <div class="inline-cta"><p>Need a sharper, full-resolution result? Unblur Image for iPhone rebuilds lost detail with AI. Rated 4.7★ on the App Store.</p><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-free-unblur-tool&mt=8" rel="noopener"><img src="/assets/img/app-store-en-us.svg" alt="Download on the App Store" width="162" height="54"></a></div>
-<div id="faq"><h2>FAQ</h2><div class="faq"><details><summary>Is my photo uploaded to a server?</summary><p>No. All processing happens in your browser using a Web Worker. You can even disconnect from the internet after the page loads.</p></details><details><summary>Is it really free?</summary><p>Yes, with no sign-up and no limit on the number of photos. Previews are capped at 1000 px and watermarked.</p></details></div></div>
+<div id="faq"><h2>FAQ</h2><div class="faq"><details><summary>Is my photo uploaded to a server?</summary><p>No. All processing happens in your browser using a Web Worker. You can even disconnect from the internet after the page loads.</p></details><details><summary>Can I download the result?</summary><p>The online tool is a preview only: low resolution, watermarked and not downloadable. To save a full-resolution, watermark-free photo, use the free Unblur Image app for iPhone.</p></details></div></div>
 </div></section>
 <section class="alt"><div class="wrap"><h2>Related guides</h2><div class="grid2" style="margin-top:20px"><a class="card" href="/fix-motion-blur-photos/"><h3>How to fix motion blur in photos</h3><p>Fix shaky, motion-blurred photos: try the free in-browser motion blur fixer, learn why it happens, and get full-resolution AI results on iPhone.</p></a><a class="card" href="/unblur-text-in-image/"><h3>Unblur text in an image</h3><p>Make blurry text readable: receipts, screenshots, whiteboards and documents. Free in-browser text sharpening plus AI on iPhone, and what is not possible.</p></a></div></div></section>
 <section><div class="wrap"><div class="cta-band">
@@ -264,7 +271,7 @@ footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 <li><a href="/terms-of-use.html">Terms of Use</a></li></ul>
 <p style="margin-top:12px">© 2026 Unblur Image</p></div>
 </div></footer>
-<div class="sticky-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-sticky-en&mt=8" rel="noopener">Get the app</a></div>
-<script src="/assets/site.js?v=03a60a42" defer></script><script src="/assets/tool.js?v=6bccd2ad" defer></script>
+<div class="sticky-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-sticky-en&mt=8" rel="noopener">Download free on the App Store</a></div>
+<script src="/assets/site.js?v=03a60a42" defer></script><script src="/assets/tool.js?v=0a2247e5" defer></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ GUIDES = [
         "intro": "Motion blur turns sharp edges into streaks. It happens when the camera or the subject moves while the shutter is open. The good news: because the streak follows one direction, motion blur is one of the easier kinds of blur to reverse.",
         "tool_mode": "motion",
         "body": """
-<h2>Fix it free in your browser</h2>
+<h2>Preview the fix in your browser</h2>
 <p>Choose <strong>Motion blur</strong> in the tool above, then set the direction slider to match the streaks in your photo (0° for horizontal, 90° for vertical). Raise the strength until edges look crisp, and back off when you start to see halos or ripples.</p>
 <ul>
   <li><strong>Direction matters most.</strong> If the result looks doubled, the angle is off. Try 15° steps.</li>
@@ -200,7 +200,7 @@ GUIDES = [
 TOOL_PAGE = {
     "slug": "free-unblur-tool",
     "title": "Free Online Unblur Tool – Sharpen Blurry Photos, No Upload",
-    "desc": "Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after slider and instant download.",
+    "desc": "Unblur photos online for free: focus, motion and text modes. Runs in your browser with no upload and no sign-up. Before/after preview, then full-resolution AI results in the iPhone app.",
     "h1": "Free online unblur tool",
     "intro": "Sharpen a blurry photo in your browser. Pick the blur type, adjust the strength and drag the slider to compare. Your photo never leaves your device.",
     "body": """
@@ -215,13 +215,13 @@ TOOL_PAGE = {
 <p>The Unblur Image iPhone app goes further: an AI model reconstructs lost detail in faces, hair and textures, and the result keeps your photo's original resolution.</p>
 <h2>Limits of the free preview</h2>
 <ul>
-  <li>Output up to 1000 pixels on the longest side, with a small watermark.</li>
+  <li>A low-resolution, watermarked preview that can't be saved. The full-quality result comes from the iPhone app.</li>
   <li>Works best on mild to moderate, uniform blur.</li>
   <li>Some browsers can't open HEIC; on iPhone, Safari can.</li>
 </ul>
 """,
     "faq": [
         ("Is my photo uploaded to a server?", "No. All processing happens in your browser using a Web Worker. You can even disconnect from the internet after the page loads."),
-        ("Is it really free?", "Yes, with no sign-up and no limit on the number of photos. Previews are capped at 1000 px and watermarked."),
+        ("Can I download the result?", "The online tool is a preview only: low resolution, watermarked and not downloadable. To save a full-resolution, watermark-free photo, use the free Unblur Image app for iPhone."),
     ],
 }

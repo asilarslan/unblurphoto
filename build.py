@@ -116,7 +116,7 @@ def footer(t, lang):
 
 def sticky(t, lang):
     return (f'<div class="sticky-cta"><a class="btn btn-primary" href="{store_url("web-sticky-" + lang)}" '
-            f'rel="noopener">{t["nav"]["get"]}</a></div>')
+            f'rel="noopener">{t["tool"]["btn"]}</a></div>')
 
 
 def tool_html(t, default_mode="focus"):
@@ -143,9 +143,10 @@ def tool_html(t, default_mode="focus"):
 <div class="ctl"><label>{tt['strength']} <span data-strength-val>50</span></label><input type="range" min="0" max="100" value="50" data-strength aria-label="{tt['strength']}"></div>
 <div class="ctl" data-angle-row{'' if default_mode == 'motion' else ' hidden'}><label>{tt['angle']} <span data-angle-val>0°</span></label><input type="range" min="0" max="175" step="5" value="0" data-angle aria-label="{tt['angle']}"></div>
 <div class="status" data-status aria-live="polite"></div><div class="bar"><i></i></div>
-<div class="actions"><a class="btn btn-primary" data-download download="unblurred-preview.jpg" href="#" aria-disabled="true">{tt['download']}</a>
-<button type="button" class="btn btn-ghost" data-new>{tt['again']}</button></div>
-<div class="upsell"><strong>{tt['upsell']}</strong>{badge(t, 'web-tool-' + t['badge'][:2])}</div>
+<div class="upsell" data-upsell><strong>{tt['upsell']}</strong><p>{tt['points']}</p>
+<a class="btn btn-primary" href="{store_url('web-tool-' + t['badge'][:2])}" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9c-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>{tt['btn']}</a>
+<div class="qr-mini"><img src="/assets/img/qr-app-store.svg" alt="QR code" width="72" height="72" loading="lazy"><span>{esc(t['qr'])}</span></div></div>
+<div class="actions"><button type="button" class="btn btn-ghost" data-new>{tt['again']}</button></div>
 <p class="note">{tt['note']}</p>
 </div></div></div>"""
 
