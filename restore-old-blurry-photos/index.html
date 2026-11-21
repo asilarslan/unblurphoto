@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Restore Old Blurry Photos: Unblur Vintage Pictures with AI</title>
+<meta name="description" content="Bring old, soft and scanned family photos back to life. Scanning tips, a free online unblur preview, and AI restoration on iPhone.">
+<link rel="canonical" href="https://unblurphoto.app/restore-old-blurry-photos/">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="apple-itunes-app" content="app-id=6751783489">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Unblur Image">
+<meta property="og:url" content="https://unblurphoto.app/restore-old-blurry-photos/">
+<meta property="og:title" content="Restore Old Blurry Photos: Unblur Vintage Pictures with AI">
+<meta property="og:description" content="Bring old, soft and scanned family photos back to life. Scanning tips, a free online unblur preview, and AI restoration on iPhone.">
+<meta property="og:image" content="https://unblurphoto.app/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restore Old Blurry Photos: Unblur Vintage Pictures with AI">
+<meta name="twitter:description" content="Bring old, soft and scanned family photos back to life. Scanning tips, a free online unblur preview, and AI restoration on iPhone.">
+<meta name="twitter:image" content="https://unblurphoto.app/assets/img/og.jpg">
+<link rel="icon" href="/assets/img/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+<link rel="manifest" href="/manifest.json">
+
+<style>:root {
+  --brand: #5b5bd6;
+  --brand-2: #7c3aed;
+  --ink: #111827;
+  --muted: #4b5563;
+  --line: #e5e7eb;
+  --soft: #f5f6fb;
+  --radius: 18px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  color: var(--ink); background: #fff; line-height: 1.6; font-size: 17px;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--brand); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 760px; }
+
+/* header */
+.top { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
+.brand { white-space: nowrap; display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+.top nav { margin-left: auto; display: flex; gap: 20px; align-items: center; }
+.top nav a { color: var(--ink); text-decoration: none; font-size: .95rem; font-weight: 500; }
+.top nav a:hover { color: var(--brand); }
+.top .get { white-space: nowrap; background: var(--ink); color: #fff !important; padding: 8px 14px; border-radius: 999px; }
+.lang { font-size: .9rem; border: 1px solid var(--line); border-radius: 8px; padding: 4px 6px; background: #fff; color: var(--ink); }
+@media (max-width: 760px) { .top nav .hide-sm, .top .lang { display: none; } .top nav { gap: 10px; } .top .get { padding: 7px 12px; font-size: .9rem; } }
+
+/* hero */
+.hero { background: radial-gradient(1200px 500px at 10% -10%, #e9e7ff 0, transparent 60%), radial-gradient(900px 500px at 100% 0, #f3e8ff 0, transparent 60%); padding: 40px 0 56px; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 600; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; text-decoration: none; }
+.stars { color: #f59e0b; letter-spacing: 1px; }
+.hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.1; letter-spacing: -.02em; margin: 16px 0 14px; }
+.hero .sub { font-size: 1.15rem; color: var(--muted); max-width: 560px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 26px; }
+.badge img { height: 54px; width: auto; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 54px; padding: 0 22px; border-radius: 12px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; }
+.btn-primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; box-shadow: 0 8px 24px rgba(91,91,214,.35); }
+.btn-ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+.btn:disabled { opacity: .5; cursor: default; }
+.compat { margin-top: 14px; font-size: .88rem; color: var(--muted); }
+.qr { display: none; align-items: center; gap: 12px; margin-top: 22px; font-size: .88rem; color: var(--muted); }
+.qr img { width: 84px; height: 84px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+@media (min-width: 900px) and (hover: hover) { .qr { display: flex; } }
+@media (max-width: 860px) {
+  .hero { padding: 20px 0 40px; }
+  .hero .wrap { grid-template-columns: 1fr; gap: 28px; }
+  .hero .media { max-width: 420px; margin: 0 auto; width: 100%; }
+  .hero h1 { margin-top: 12px; }
+  .hero .sub { font-size: 1.02rem; }
+}
+
+/* before / after */
+.ba { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; background: #111; box-shadow: 0 24px 60px rgba(17,24,39,.22); touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: ew-resize; --pos: 50%; }
+.ba img, .ba canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.ba .ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba .ba-line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: #fff; box-shadow: 0 0 8px rgba(0,0,0,.4); pointer-events: none; }
+.ba .ba-knob { position: absolute; top: 50%; left: var(--pos); width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.35); display: grid; place-items: center; font-size: 18px; color: var(--ink); outline-offset: 3px; }
+.ba .ba-tag { position: absolute; bottom: 12px; padding: 3px 10px; border-radius: 999px; background: rgba(0,0,0,.6); color: #fff; font-size: .78rem; font-weight: 600; pointer-events: none; }
+.ba .ba-tag.l { left: 12px; } .ba .ba-tag.r { right: 12px; }
+.caption { text-align: center; font-size: .85rem; color: var(--muted); margin-top: 10px; }
+
+/* sections */
+section { padding: 64px 0; }
+section.alt { background: var(--soft); }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); line-height: 1.2; letter-spacing: -.01em; margin-bottom: 14px; }
+h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.lead { color: var(--muted); font-size: 1.08rem; max-width: 720px; margin-bottom: 28px; }
+.center { text-align: center; } .center .lead { margin-left: auto; margin-right: auto; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media (max-width: 860px) { .grid3, .grid2 { grid-template-columns: 1fr; } }
+.card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.card p { color: var(--muted); }
+a.card { text-decoration: none; color: inherit; transition: border-color .2s, transform .2s; }
+a.card:hover { border-color: var(--brand); transform: translateY(-2px); }
+a.card .more { color: var(--brand); font-weight: 600; font-size: .95rem; margin-top: 8px; display: inline-block; }
+.num { width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-weight: 700; margin-bottom: 12px; }
+.shots { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 4px 14px; }
+.shots img:first-child { margin-left: auto; } .shots img:last-child { margin-right: auto; }
+.shots img { width: 230px; flex: 0 0 auto; border-radius: 26px; border: 1px solid var(--line); scroll-snap-align: center; box-shadow: 0 10px 30px rgba(17,24,39,.12); }
+.faq details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+.faq summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.faq summary::after { content: "+"; font-size: 1.3rem; line-height: 1; color: var(--brand); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { color: var(--muted); margin-top: 8px; }
+.cta-band { background: linear-gradient(135deg, #1f1b4d, #3b1f6b); color: #fff; border-radius: 24px; padding: 40px 28px; text-align: center; }
+.cta-band p { opacity: .85; margin-bottom: 20px; }
+.cta-band .ctas { justify-content: center; }
+.cta-band .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+
+/* article pages */
+.article { padding: 36px 0 24px; }
+.crumbs { font-size: .88rem; color: var(--muted); margin-bottom: 14px; }
+.crumbs a { color: var(--muted); }
+.article h1 { font-size: clamp(1.9rem, 4.4vw, 2.7rem); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 14px; }
+.article .intro { font-size: 1.15rem; color: var(--muted); }
+.prose h2 { margin-top: 40px; font-size: 1.6rem; }
+.prose h3 { margin-top: 22px; }
+.prose p, .prose ul, .prose ol { margin: 12px 0; }
+.prose ul, .prose ol { padding-left: 22px; }
+.prose li { margin: 6px 0; }
+.prose table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .95rem; }
+.prose th, .prose td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.prose th { background: var(--soft); }
+.table-scroll { overflow-x: auto; }
+.inline-cta { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin: 28px 0; }
+.inline-cta p { flex: 1 1 260px; margin: 0; font-weight: 600; }
+.inline-cta .badge img { height: 46px; }
+
+/* tool */
+.tool { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 20px; box-shadow: 0 16px 40px rgba(17,24,39,.08); }
+.drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 220px; border: 2px dashed #c7c9f0; border-radius: var(--radius); background: #fafaff; text-align: center; padding: 24px; cursor: pointer; transition: background .2s, border-color .2s; }
+.drop:hover, .drop.over { background: #f0f0ff; border-color: var(--brand); }
+.drop .big { font-size: 1.1rem; font-weight: 700; }
+.drop .small { font-size: .88rem; color: var(--muted); }
+.tool-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; margin-top: 14px; }
+.tool-work { display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px; align-items: start; }
+@media (max-width: 860px) { .tool-work { grid-template-columns: 1fr; } }
+.tool .ba { aspect-ratio: auto; height: min(70vh, 560px); background: #0b0b12; box-shadow: none; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--soft); border-radius: 12px; padding: 4px; gap: 4px; }
+.seg button { white-space: nowrap; border: 0; background: transparent; padding: 10px 6px; border-radius: 9px; font: inherit; font-size: .92rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+.ctl { margin-top: 16px; }
+.ctl label { display: flex; justify-content: space-between; font-size: .92rem; font-weight: 600; margin-bottom: 6px; }
+.ctl input[type=range] { width: 100%; accent-color: var(--brand); height: 28px; }
+.status { font-size: .9rem; color: var(--muted); min-height: 1.4em; margin-top: 12px; }
+.bar { height: 6px; background: var(--soft); border-radius: 6px; overflow: hidden; margin-top: 6px; }
+.bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--brand), var(--brand-2)); transition: width .15s; }
+.tool .note { font-size: .85rem; color: var(--muted); margin-top: 14px; }
+.tool .upsell { margin-top: 16px; padding: 14px; border-radius: 14px; background: linear-gradient(135deg, #eef0ff, #f6ecff); }
+.tool .upsell strong { display: block; margin-bottom: 8px; }
+.tool .upsell .badge img { height: 44px; }
+.tool .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.tool .actions .btn { min-height: 46px; flex: 1 1 140px; }
+[hidden] { display: none !important; }
+
+/* footer */
+footer { border-top: 1px solid var(--line); padding: 36px 0 48px; font-size: .92rem; color: var(--muted); }
+footer .cols { display: flex; flex-wrap: wrap; gap: 28px 48px; justify-content: space-between; }
+footer ul { list-style: none; }
+footer li { margin: 6px 0; }
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--brand); }
+footer .h { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+
+/* sticky mobile CTA */
+.sticky-cta { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 60; display: none; }
+.sticky-cta a { width: 100%; }
+@media (max-width: 760px) { .sticky-cta.show { display: block; } body { padding-bottom: 80px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://unblurphoto.app/"}, {"@type": "ListItem", "position": 2, "name": "Restore old, blurry photos", "item": "https://unblurphoto.app/restore-old-blurry-photos/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Restore Old Blurry Photos: Unblur Vintage Pictures with AI", "description": "Bring old, soft and scanned family photos back to life. Scanning tips, a free online unblur preview, and AI restoration on iPhone.", "dateModified": "2026-11-21", "mainEntityOfPage": "https://unblurphoto.app/restore-old-blurry-photos/", "image": "https://unblurphoto.app/assets/img/og.jpg", "author": {"@type": "Organization", "name": "Unblur Image", "url": "https://unblurphoto.app/"}, "publisher": {"@type": "Organization", "name": "Unblur Image", "logo": {"@type": "ImageObject", "url": "https://unblurphoto.app/assets/img/icon-512.png"}}}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/"><img src="/assets/img/icon-64.png" alt="" width="32" height="32">Unblur Image</a>
+<nav>
+<a class="hide-sm" href="/#free-tool">Free tool</a>
+<a class="hide-sm" href="/#how">How it works</a>
+<a class="hide-sm" href="/#faq">FAQ</a>
+<select class="lang" aria-label="Language"><option value="/" selected>English</option><option value="/tr/">Türkçe</option><option value="/es/">Español</option><option value="/pt/">Português</option><option value="/de/">Deutsch</option><option value="/ja/">日本語</option></select>
+<a class="get" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-nav-en&mt=8" rel="noopener">Get the app</a>
+</nav></div></header>
+<main>
+<section class="article" data-hero><div class="wrap narrow">
+<nav class="crumbs"><a href="/">Home</a> › Restore old, blurry photos</nav>
+<h1>Restore old, blurry photos</h1>
+<p class="intro">Old prints are rarely blurry for just one reason. Soft lenses, film grain, faded dyes and low-resolution scans all add up. A good restore starts with a good scan, then sharpens gently.</p>
+</div></section>
+<section id="free-tool" class="alt" style="padding:32px 0"><div class="wrap"><div class="tool" data-tool data-worker="/assets/deblur-worker.js?v=89883905" data-sample="/assets/img/sample-blurry.webp">
+<script type="application/json" class="tool-i18n">{"processing": "Sharpening… {p}%", "done": "Done. Drag the slider to compare.", "error": "This image couldn't be opened. Try a JPG or PNG."}</script>
+<div class="drop" data-drop role="button" tabindex="0">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5b5bd6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
+<div class="big">Drop a photo here or tap to choose</div><div class="small">Runs in your browser: your photo is never uploaded.</div>
+<input type="file" accept="image/*" hidden></div>
+<div class="tool-row" data-start><button type="button" class="btn btn-ghost" data-sample>Try with a sample photo</button></div>
+<div class="tool-work" data-work hidden>
+<div class="ba" data-result>
+<img class="ba-after" alt="After"><img class="ba-before" alt="Before">
+<span class="ba-tag l">Before</span><span class="ba-tag r">After</span>
+<div class="ba-line"></div><div class="ba-knob" role="slider" tabindex="0" aria-label="Before / After" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">⇔</div>
+</div>
+<div>
+<div class="seg" role="group"><button type="button" data-mode="focus" aria-pressed="true">Out of focus</button><button type="button" data-mode="motion" aria-pressed="false">Motion blur</button><button type="button" data-mode="text" aria-pressed="false">Text</button></div>
+<div class="ctl"><label>Blur strength <span data-strength-val>50</span></label><input type="range" min="0" max="100" value="50" data-strength aria-label="Blur strength"></div>
+<div class="ctl" data-angle-row hidden><label>Blur direction <span data-angle-val>0°</span></label><input type="range" min="0" max="175" step="5" value="0" data-angle aria-label="Blur direction"></div>
+<div class="status" data-status aria-live="polite"></div><div class="bar"><i></i></div>
+<div class="actions"><a class="btn btn-primary" data-download download="unblurred-preview.jpg" href="#" aria-disabled="true">Download preview</a>
+<button type="button" class="btn btn-ghost" data-new>Try another photo</button></div>
+<div class="upsell"><strong>Want a sharper, full-resolution result?</strong><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-tool-en&mt=8" rel="noopener"><img src="/assets/img/app-store-en-us.svg" alt="Download on the App Store" width="162" height="54"></a></div>
+<p class="note">Free preview: up to 1000 px, watermarked, classic deconvolution. The app uses AI for stronger, full-resolution results.</p>
+</div></div></div></div></section>
+<section style="padding-top:24px"><div class="wrap narrow prose">
+
+<h2>Step 1: Get the best possible scan</h2>
+<ul>
+  <li><strong>Use a flatbed scanner at 600 dpi</strong> (1200 dpi for wallet-size prints). Scanning resolution is detail you never have to invent later.</li>
+  <li><strong>No scanner?</strong> Photograph the print in soft daylight with the phone held exactly parallel. Avoid the flash, which causes glare.</li>
+  <li><strong>Clean the glass and the print</strong> with a soft, dry cloth. Dust looks like noise and gets sharpened along with everything else.</li>
+  <li><strong>Remove the photo from glossy sleeves</strong> to avoid reflections.</li>
+</ul>
+
+<h2>Step 2: Sharpen gently</h2>
+<p>Try the free tool above in <strong>Out of focus</strong> mode with a low strength (20–40). Old photos look fake when they are oversharpened. Stop as soon as eyes and hairlines read clearly.</p>
+
+<h2>Step 3: Use AI for faces and lost detail</h2>
+<p>Classic sharpening can only enhance edges that are still in the image. When a face is just a soft blob, the Unblur Image iPhone app uses an AI model to reconstruct plausible eyes, skin texture and hair, and keeps the full resolution of your scan. Start with a conservative <em>Safety Tolerance</em>; on family photos you want a result that still looks like grandma, not a stranger.</p>
+
+<h2>Keep the original</h2>
+<p>Always keep the untouched scan. Save the restored copy as PNG for printing or JPG for sharing, and label it as restored if you're building a family archive.</p>
+
+<h2>What to expect</h2>
+<div class="table-scroll"><table>
+  <tr><th>Problem</th><th>Free tool</th><th>iPhone app (AI)</th></tr>
+  <tr><td>Slightly soft print</td><td>Good</td><td>Very good</td></tr>
+  <tr><td>Low-resolution scan</td><td>Limited</td><td>Good</td></tr>
+  <tr><td>Face is a blur</td><td>Not enough</td><td>Rebuilds plausible detail</td></tr>
+  <tr><td>Tears, scratches, colour fading</td><td>No</td><td>No (focused on blur)</td></tr>
+</table></div>
+
+<div class="inline-cta"><p>Need a sharper, full-resolution result? Unblur Image for iPhone rebuilds lost detail with AI. Rated 4.7★ on the App Store.</p><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-restore-old-blurry-photos&mt=8" rel="noopener"><img src="/assets/img/app-store-en-us.svg" alt="Download on the App Store" width="162" height="54"></a></div>
+<div id="faq"><h2>FAQ</h2><div class="faq"><details><summary>Will AI change how people in old photos look?</summary><p>It can. When a lot of detail is missing, the AI fills in a likely version. Use a conservative setting and compare with the original before you share or print.</p></details><details><summary>Does the app fix scratches or colour?</summary><p>No. Unblur Image focuses on blur and sharpness. Retouch scratches and colour in a separate editor.</p></details></div></div>
+</div></section>
+<section class="alt"><div class="wrap"><h2>Related guides</h2><div class="grid2" style="margin-top:20px"><a class="card" href="/fix-blurry-photos-on-iphone/"><h3>How to fix blurry photos on iPhone</h3><p>Why iPhone photos come out blurry and how to fix them: lens, focus, low light, Portrait mode, iCloud thumbnails. Plus a free online fixer and an AI app.</p></a><a class="card" href="/unblur-text-in-image/"><h3>Unblur text in an image</h3><p>Make blurry text readable: receipts, screenshots, whiteboards and documents. Free in-browser text sharpening plus AI on iPhone, and what is not possible.</p></a></div></div></section>
+<section><div class="wrap"><div class="cta-band">
+<h2>Bring your blurry photos back</h2><p>Get the full-resolution AI result on your iPhone.</p>
+<div class="ctas"><a class="badge" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-bottom-restore-old-blurry-photos&mt=8" rel="noopener"><img src="/assets/img/app-store-en-us.svg" alt="Download on the App Store" width="162" height="54"></a><a class="btn btn-ghost" href="/">Back to home</a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap cols">
+<div><div class="h">App</div><ul>
+<li><a href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-footer-en&mt=8" rel="noopener">App Store</a></li>
+<li><a href="/free-unblur-tool/">Free tool</a></li>
+<li><a href="mailto:asilarslan93@gmail.com">Support</a></li></ul></div>
+<div><div class="h">Guides</div><ul><li><a href="/fix-motion-blur-photos/">How to fix motion blur in photos</a></li><li><a href="/restore-old-blurry-photos/">Restore old, blurry photos</a></li><li><a href="/unblur-text-in-image/">Unblur text in an image</a></li><li><a href="/fix-blurry-photos-on-iphone/">How to fix blurry photos on iPhone</a></li><li><a href="/remini-alternative-ios/">A simple Remini alternative for fixing blurry photos</a></li></ul></div>
+<div><div class="h">Language</div><ul><li><a href="/" hreflang="en">English</a></li><li><a href="/tr/" hreflang="tr">Türkçe</a></li><li><a href="/es/" hreflang="es">Español</a></li><li><a href="/pt/" hreflang="pt">Português</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/ja/" hreflang="ja">日本語</a></li></ul></div>
+<div><div class="h">Legal</div><ul>
+<li><a href="/privacy-policy.html">Privacy Policy</a></li>
+<li><a href="/terms-of-use.html">Terms of Use</a></li></ul>
+<p style="margin-top:12px">© 2026 Unblur Image</p></div>
+</div></footer>
+<div class="sticky-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/apple-store/id6751783489?ct=web-sticky-en&mt=8" rel="noopener">Get the app</a></div>
+<script src="/assets/site.js?v=03a60a42" defer></script><script src="/assets/tool.js?v=6bccd2ad" defer></script>
+</body>
+</html>

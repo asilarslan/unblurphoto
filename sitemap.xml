@@ -1,21 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://unblurphoto.app/</loc>
-    <lastmod>2025-01-07</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-21</lastmod>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unblurphoto.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://unblurphoto.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unblurphoto.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unblurphoto.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unblurphoto.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://unblurphoto.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unblurphoto.app/"/>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/tr/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unblurphoto.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://unblurphoto.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unblurphoto.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unblurphoto.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unblurphoto.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://unblurphoto.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unblurphoto.app/"/>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/es/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unblurphoto.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://unblurphoto.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unblurphoto.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unblurphoto.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unblurphoto.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://unblurphoto.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unblurphoto.app/"/>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/pt/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unblurphoto.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://unblurphoto.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unblurphoto.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unblurphoto.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unblurphoto.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://unblurphoto.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unblurphoto.app/"/>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/de/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unblurphoto.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://unblurphoto.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unblurphoto.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unblurphoto.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unblurphoto.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://unblurphoto.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unblurphoto.app/"/>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/ja/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unblurphoto.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://unblurphoto.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unblurphoto.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unblurphoto.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unblurphoto.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://unblurphoto.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unblurphoto.app/"/>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/free-unblur-tool/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/fix-motion-blur-photos/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/restore-old-blurry-photos/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/unblur-text-in-image/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/fix-blurry-photos-on-iphone/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unblurphoto.app/remini-alternative-ios/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://unblurphoto.app/privacy-policy.html</loc>
-    <lastmod>2025-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://unblurphoto.app/terms-of-use.html</loc>
-    <lastmod>2025-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>

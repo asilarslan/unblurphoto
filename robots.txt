@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://unblurphoto.app/sitemap.xml
-
-# Allow all crawlers to access the site
-# Optimized for search engines
-# Unblur Image: AI Remove Blur - Photo Enhancement App
