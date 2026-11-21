@@ -5,8 +5,8 @@ which every language version says plainly in its FAQ."""
 HOME = {
     "en": {
         "locale": "en_US", "name": "English", "badge": "en-us",
-        "title": "Unblur Photos Free – Fix Blurry Pictures Online | Unblur Image",
-        "desc": "Fix blurry photos free in your browser: no upload, no sign-up. For full-resolution AI results, get Unblur Image for iPhone, rated {rating}★ on the App Store.",
+        "title": "Unblur Image – Fix Blurry Photos with AI on iPhone (Free)",
+        "desc": "Fix blurry, shaky and out-of-focus photos with AI on iPhone and iPad. Full resolution, one tap, free download. Rated {rating}★ on the App Store.",
         "nav": {"tool": "Free tool", "how": "How it works", "faq": "FAQ", "get": "Get the app", "guides": "Guides"},
         "rating": "{rating} on the App Store · {count} ratings",
         "h1": "Fix blurry photos with AI on your iPhone",
@@ -67,8 +67,8 @@ HOME = {
     },
     "tr": {
         "locale": "tr_TR", "name": "Türkçe", "badge": "tr-tr",
-        "title": "Bulanık Fotoğraf Netleştirme – Ücretsiz Online Araç | Unblur Image",
-        "desc": "Bulanık fotoğrafları tarayıcında ücretsiz netleştir: yükleme yok, üyelik yok. Tam çözünürlüklü yapay zekâ sonucu için App Store'da {rating}★ puanlı Unblur Image'ı indir.",
+        "title": "Bulanık Fotoğraf Netleştirme – iPhone için Yapay Zekâ | Unblur Image",
+        "desc": "Bulanık, titrek ve odağı kaçmış fotoğrafları iPhone ve iPad'de yapay zekâyla tek dokunuşta, tam çözünürlükte netleştir. Ücretsiz indir, App Store'da {rating}★.",
         "nav": {"tool": "Ücretsiz araç", "how": "Nasıl çalışır", "faq": "SSS", "get": "Uygulamayı indir", "guides": "Rehberler"},
         "rating": "App Store'da {rating} · {count} değerlendirme",
         "h1": "Bulanık fotoğrafları iPhone'unda yapay zekâyla netleştir",
@@ -130,8 +130,8 @@ HOME = {
     },
     "es": {
         "locale": "es_ES", "name": "Español", "badge": "es-es",
-        "title": "Quitar el Desenfoque de Fotos Gratis Online | Unblur Image",
-        "desc": "Arregla fotos borrosas gratis en tu navegador: sin subir archivos ni registrarte. Para resultados con IA a resolución completa, descarga Unblur Image para iPhone ({rating}★ en App Store).",
+        "title": "Quitar el Desenfoque de Fotos con IA en iPhone | Unblur Image",
+        "desc": "Arregla fotos borrosas, movidas y desenfocadas con IA en iPhone y iPad. Resolución completa, un toque, descarga gratis. {rating}★ en App Store.",
         "nav": {"tool": "Herramienta gratis", "how": "Cómo funciona", "faq": "Preguntas", "get": "Descargar app", "guides": "Guías"},
         "rating": "{rating} en App Store · {count} valoraciones",
         "h1": "Arregla fotos borrosas con IA en tu iPhone",
@@ -193,8 +193,8 @@ HOME = {
     },
     "pt": {
         "locale": "pt_BR", "name": "Português", "badge": "pt-br",
-        "title": "Tirar o Desfoque de Fotos Grátis Online | Unblur Image",
-        "desc": "Corrija fotos borradas grátis no navegador: sem upload e sem cadastro. Para resultados com IA em resolução total, baixe o Unblur Image para iPhone ({rating}★ na App Store).",
+        "title": "Tirar o Desfoque de Fotos com IA no iPhone | Unblur Image",
+        "desc": "Corrija fotos borradas, tremidas e fora de foco com IA no iPhone e iPad. Resolução total, um toque, download grátis. {rating}★ na App Store.",
         "nav": {"tool": "Ferramenta grátis", "how": "Como funciona", "faq": "Perguntas", "get": "Baixar app", "guides": "Guias"},
         "rating": "{rating} na App Store · {count} avaliações",
         "h1": "Corrija fotos borradas com IA no seu iPhone",
@@ -256,8 +256,8 @@ HOME = {
     },
     "de": {
         "locale": "de_DE", "name": "Deutsch", "badge": "de-de",
-        "title": "Unscharfe Fotos scharf machen – kostenlos online | Unblur Image",
-        "desc": "Unscharfe Fotos kostenlos im Browser schärfen – ohne Upload und ohne Anmeldung. Für KI-Ergebnisse in voller Auflösung: Unblur Image fürs iPhone ({rating}★ im App Store).",
+        "title": "Unscharfe Fotos scharf machen mit KI – iPhone App | Unblur Image",
+        "desc": "Unscharfe, verwackelte Fotos per KI auf iPhone und iPad scharf machen – in voller Auflösung, mit einem Tipp. Kostenlos laden, {rating}★ im App Store.",
         "nav": {"tool": "Gratis-Tool", "how": "So funktioniert's", "faq": "FAQ", "get": "App laden", "guides": "Ratgeber"},
         "rating": "{rating} im App Store · {count} Bewertungen",
         "h1": "Unscharfe Fotos mit KI auf dem iPhone retten",
@@ -319,8 +319,8 @@ HOME = {
     },
     "ja": {
         "locale": "ja_JP", "name": "日本語", "badge": "ja-jp",
-        "title": "ぼやけた写真を鮮明に – 無料オンラインツール | Unblur Image",
-        "desc": "ぼやけた写真をブラウザで無料補正。アップロードも登録も不要です。フル解像度のAI補正は、App Storeで評価{rating}★のiPhoneアプリ「Unblur Image」で。",
+        "title": "ぼやけた写真をAIで鮮明に – iPhoneアプリ | Unblur Image",
+        "desc": "ぼやけ・手ぶれ・ピンボケの写真をiPhone・iPadでAI補正。ワンタップでフル解像度のまま復元。無料ダウンロード、App Store評価{rating}★。",
         "nav": {"tool": "無料ツール", "how": "使い方", "faq": "よくある質問", "get": "アプリを入手", "guides": "ガイド"},
         "rating": "App Store評価 {rating}（{count}件）",
         "h1": "ぼやけた写真をiPhoneでAI補正",

@@ -89,7 +89,7 @@ def header(t, lang, anchors_local):
     return f"""<header class="top"><div class="wrap">
 <a class="brand" href="{home_path(lang)}"><img src="/assets/img/icon-64.png" alt="" width="32" height="32">Unblur Image</a>
 <nav>
-<a class="hide-sm" href="{base}#free-tool">{n['tool']}</a>
+<a class="hide-sm" href="/free-unblur-tool/">{n['tool']}</a>
 <a class="hide-sm" href="{base}#how">{n['how']}</a>
 <a class="hide-sm" href="{base}#faq">{n['faq']}</a>
 <select class="lang" aria-label="Language">{opts}</select>
@@ -259,16 +259,11 @@ def build_home(lang, app):
 <a class="eyebrow" href="{store_url('web-rating-' + lang)}" rel="noopener"><span class="stars">★★★★★</span> {t['rating'].format(**fmt)}</a>
 <h1>{esc(t['h1'])}</h1>
 <p class="sub">{esc(t['sub'])}</p>
-<div class="ctas">{badge(t, 'web-hero-' + lang)}<a class="btn btn-ghost" href="#free-tool">{t['try']} ↓</a></div>
+<div class="ctas">{badge(t, 'web-hero-' + lang)}</div>
 <p class="compat">{esc(t['compat'])}</p>
 <div class="qr"><img src="/assets/img/qr-app-store.svg" alt="QR code" width="84" height="84"><span>{esc(t['qr'])}</span></div>
 </div>
 <div class="media">{slider_html(t)}<p class="caption">{esc(t['demo_caption'])}</p></div>
-</div></section>
-
-<section id="free-tool" class="alt"><div class="wrap">
-<div class="center"><h2>{esc(t['tool_h2'])}</h2><p class="lead">{esc(t['tool_lead'])}</p></div>
-{tool_html(t)}
 </div></section>
 
 <section><div class="wrap">
@@ -297,7 +292,7 @@ def build_home(lang, app):
     jsonld = [app_ld(app, lang), {
         "@context": "https://schema.org", "@type": "WebSite", "name": "Unblur Image",
         "url": SITE + home_path(lang), "inLanguage": lang}]
-    out = page(lang, t["title"], desc, home_path(lang), body, alternates=LANGS, jsonld=jsonld, tool=True,
+    out = page(lang, t["title"], desc, home_path(lang), body, alternates=LANGS, jsonld=jsonld,
                preload='<link rel="preload" as="image" href="/assets/img/demo-after.webp" fetchpriority="high">')
     write("index.html" if lang == "en" else f"{lang}/index.html", out)
 
